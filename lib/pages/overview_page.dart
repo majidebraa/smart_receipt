@@ -52,21 +52,20 @@ class OverviewPage extends StatelessWidget {
           borderRadius: BorderRadius.circular(18),
         ),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const Text("Total this month",
-                style: TextStyle(color: Colors.white70, fontSize: 16)),
+                textAlign: TextAlign.start,
+                style: TextStyle(color: Colors.white70, fontSize: 16,)),
             const SizedBox(height: 8),
             Text(
               "${total.toStringAsFixed(0)} \$",
+              textAlign: TextAlign.center,
               style: const TextStyle(
                   fontSize: 26, color: Colors.white, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 6),
-            const Text(
-              "+17% compared to last month",
-              style: TextStyle(color: Colors.white70, fontSize: 14),
-            ),
+
           ],
         ),
       );
